@@ -26,12 +26,12 @@ import "assets/demo/demo.css";
 import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
-import VegaPortfolio from "views/examples/ProfilePage.js";
+import AlanVega from "views/examples/ProfilePage.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/components" render={(props) => <Index {...props} />} />
+      {/* <Route path="/components" render={(props) => <Index {...props} />} />
       <Route
         path="/landing-page"
         render={(props) => <LandingPage {...props} />}
@@ -39,12 +39,9 @@ ReactDOM.render(
       <Route
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}
-      />
-      <Route
-        path="/VegaPortfolio"
-        render={(props) => <VegaPortfolio {...props} />}
-      />
-      <Redirect from="/" to="/components" />
+      /> */}
+      <Route path="/AlanVega" render={(props) => <AlanVega {...props} />} />
+      <Redirect from="/" to="/AlanVega" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
