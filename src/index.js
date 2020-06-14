@@ -31,15 +31,6 @@ import AlanVega from "views/examples/ProfilePage.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      {/* <Route path="/components" render={(props) => <Index {...props} />} />
-      <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
-      /> */}
       <Route path="/AlanVega" render={(props) => <AlanVega {...props} />} />
       <Redirect from="/" to="/AlanVega" />
     </Switch>

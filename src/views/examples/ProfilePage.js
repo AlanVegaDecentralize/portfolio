@@ -40,29 +40,31 @@ import {
   Row,
   Col,
   UncontrolledTooltip,
-  UncontrolledCarousel
+  UncontrolledCarousel,
 } from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import ContactNavbar from "components/Navbars/ContactNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import ContactNavBar from "components/Navbars/ContactNavbar";
 
 const carouselItems = [
   {
     src: require("assets/img/denys.jpg"),
     altText: "Slide 1",
-    caption: "Big City Life, United States"
+    caption: "Big City Life, United States",
   },
   {
     src: require("assets/img/fabien-bazanegue.jpg"),
     altText: "Slide 2",
-    caption: "Somewhere Beyond, United States"
+    caption: "Somewhere Beyond, United States",
   },
   {
     src: require("assets/img/mark-finn.jpg"),
     altText: "Slide 3",
-    caption: "Stocks, United States"
-  }
+    caption: "Stocks, United States",
+  },
 ];
 
 let ps = null;
@@ -71,7 +73,7 @@ class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabs: 1
+      tabs: 1,
     };
   }
   componentDidMount() {
@@ -96,13 +98,13 @@ class ProfilePage extends React.Component {
   toggleTabs = (e, stateName, index) => {
     e.preventDefault();
     this.setState({
-      [stateName]: index
+      [stateName]: index,
     });
   };
   render() {
     return (
       <>
-        <ExamplesNavbar />
+        <ContactNavBar />
         <div className="wrapper">
           <div className="page-header">
             <img
@@ -118,13 +120,13 @@ class ProfilePage extends React.Component {
             <Container className="align-items-center">
               <Row>
                 <Col lg="6" md="6">
-                  <h1 className="profile-title text-left">Mike Scheinder</h1>
+                  <h1 className="profile-title text-left">Alan Vega</h1>
                   <h5 className="text-on-back">01</h5>
                   <p className="profile-description">
-                    Offices parties lasting outward nothing age few resolve.
-                    Impression to discretion understood to we interested he
-                    excellence. Him remarkably use projection collecting. Going
-                    about eat forty world has round miles.
+                    Full stack developer, driven and inspired by Web 3.0.
+                    Production experience with Node.js, React, Express,
+                    Ethereum, VR/AR, and MongoDb. Python experience with Django,
+                    Flask, and IOTA.
                   </p>
                   <div className="btn-wrapper profile pt-3">
                     <Button
@@ -183,9 +185,9 @@ class ProfilePage extends React.Component {
                         <NavItem>
                           <NavLink
                             className={classnames({
-                              active: this.state.tabs === 1
+                              active: this.state.tabs === 1,
                             })}
-                            onClick={e => this.toggleTabs(e, "tabs", 1)}
+                            onClick={(e) => this.toggleTabs(e, "tabs", 1)}
                             href="#pablo"
                           >
                             Wallet
@@ -194,9 +196,9 @@ class ProfilePage extends React.Component {
                         <NavItem>
                           <NavLink
                             className={classnames({
-                              active: this.state.tabs === 2
+                              active: this.state.tabs === 2,
                             })}
-                            onClick={e => this.toggleTabs(e, "tabs", 2)}
+                            onClick={(e) => this.toggleTabs(e, "tabs", 2)}
                             href="#pablo"
                           >
                             Send
@@ -205,9 +207,9 @@ class ProfilePage extends React.Component {
                         <NavItem>
                           <NavLink
                             className={classnames({
-                              active: this.state.tabs === 3
+                              active: this.state.tabs === 3,
                             })}
-                            onClick={e => this.toggleTabs(e, "tabs", 3)}
+                            onClick={(e) => this.toggleTabs(e, "tabs", 3)}
                             href="#pablo"
                           >
                             News
@@ -327,7 +329,7 @@ class ProfilePage extends React.Component {
                       className="btn-simple"
                       color="primary"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="tim-icons icon-book-bookmark" /> Bookmark
                     </Button>
@@ -335,7 +337,7 @@ class ProfilePage extends React.Component {
                       className="btn-simple"
                       color="info"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="tim-icons icon-bulb-63" /> Check it!
                     </Button>
