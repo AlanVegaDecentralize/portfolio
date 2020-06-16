@@ -104,7 +104,7 @@ class ProfilePage extends React.Component {
   render() {
     return (
       <>
-        <ContactNavBar />
+        <ExamplesNavbar />
         <div className="wrapper">
           <div className="page-header">
             <img
@@ -123,47 +123,49 @@ class ProfilePage extends React.Component {
                   <h1 className="profile-title text-left">Alan Vega</h1>
                   <h5 className="text-on-back">01</h5>
                   <p className="profile-description">
-                    Full stack developer, driven and inspired by Web 3.0.
-                    Production experience with Node.js, React, Express,
-                    Ethereum, VR/AR, and MongoDb. Python experience with Django,
-                    Flask, and IOTA.
+                    Self-taught full stack developer, driven and inspired by Web
+                    3.0 and first principles rational. Keen on becoming a
+                    valuable member of a team through the development of
+                    maintainable code via TDD. Production experience with
+                    Node.js, React, Express, Ethereum, MongoDb, and VR/AR.
+                    Python experience with Django, Flask, and IoT.
                   </p>
                   <div className="btn-wrapper profile pt-3">
                     <Button
                       className="btn-icon btn-round"
                       color="twitter"
-                      href="https://twitter.com/creativetim"
+                      href="https://twitter.com/BankzAkuma"
                       id="tooltip639225725"
                       target="_blank"
                     >
                       <i className="fab fa-twitter" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip639225725">
-                      Follow us
+                      Follow
                     </UncontrolledTooltip>
                     <Button
                       className="btn-icon btn-round"
-                      color="facebook"
-                      href="https://www.facebook.com/creativetim"
+                      color="linkedin"
+                      href="https://www.linkedin.com/in/alan-vega/"
                       id="tooltip982846143"
                       target="_blank"
                     >
-                      <i className="fab fa-facebook-square" />
+                      <i className="fab fa-linkedin" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip982846143">
-                      Like us
+                      Connect
                     </UncontrolledTooltip>
                     <Button
                       className="btn-icon btn-round"
-                      color="dribbble"
-                      href="https://dribbble.com/creativetim"
+                      color="github"
+                      href="https://github.com/AlanVegaDecentralize"
                       id="tooltip951161185"
                       target="_blank"
                     >
-                      <i className="fab fa-dribbble" />
+                      <i className="fab fa-github" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip951161185">
-                      Follow us
+                      Check out
                     </UncontrolledTooltip>
                   </div>
                 </Col>
@@ -175,7 +177,7 @@ class ProfilePage extends React.Component {
                         className="img-center img-fluid rounded-circle"
                         src={require("assets/img/mike.jpg")}
                       />
-                      <h4 className="title">Transactions</h4>
+                      <h4 className="title">Qualities</h4>
                     </CardHeader>
                     <CardBody>
                       <Nav
@@ -190,7 +192,7 @@ class ProfilePage extends React.Component {
                             onClick={(e) => this.toggleTabs(e, "tabs", 1)}
                             href="#pablo"
                           >
-                            Wallet
+                            Technical skills
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -201,18 +203,7 @@ class ProfilePage extends React.Component {
                             onClick={(e) => this.toggleTabs(e, "tabs", 2)}
                             href="#pablo"
                           >
-                            Send
-                          </NavLink>
-                        </NavItem>
-                        <NavItem>
-                          <NavLink
-                            className={classnames({
-                              active: this.state.tabs === 3,
-                            })}
-                            onClick={(e) => this.toggleTabs(e, "tabs", 3)}
-                            href="#pablo"
-                          >
-                            News
+                            Personal Attributes
                           </NavLink>
                         </NavItem>
                       </Nav>
