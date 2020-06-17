@@ -108,9 +108,9 @@ class ProfilePage extends React.Component {
                   <p className="profile-description">
                     Self-taught full stack developer, driven and inspired by Web
                     3.0 and first principles rational. Keen on becoming a
-                    valuable member of a team through the development of
+                    valuable member of a team through the design of
                     maintainable code via TDD. Production experience with
-                    Node.js, React, Express, Ethereum, MongoDb, and VR/AR.
+                    Node.js, Typescript, React, Express, Ethereum, MongoDb, and VR/AR.
                     Python experience with Django, Flask, and IoT.
                   </p>
                   <div className="btn-wrapper profile pt-3">
@@ -180,7 +180,7 @@ class ProfilePage extends React.Component {
                         </NavItem>
                         <NavItem>
                           <NavLink
-                            className={classnames({
+                            className={classnames({ProfilePage
                               active: this.state.tabs === 2,
                             })}
                             onClick={(e) => this.toggleTabs(e, "tabs", 2)}
@@ -252,26 +252,6 @@ class ProfilePage extends React.Component {
                           >
                             <i className="tim-icons icon-send" />
                           </Button>
-                        </TabPane>
-                        <TabPane tabId="tab3">
-                          <Table className="tablesorter" responsive>
-                            <thead className="text-primary">
-                              <tr>
-                                <th className="header">Latest Crypto News</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>The Daily: Nexo to Pay on Stable...</td>
-                              </tr>
-                              <tr>
-                                <td>Venezuela Begins Public of Nation...</td>
-                              </tr>
-                              <tr>
-                                <td>PR: BitCanna – Dutch Blockchain...</td>
-                              </tr>
-                            </tbody>
-                          </Table>
                         </TabPane>
                       </TabContent>
                     </CardBody>
