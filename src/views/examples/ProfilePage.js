@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
-// import PerfectScrollbar from "perfect-scrollbar";
+import PerfectScrollbar from "perfect-scrollbar";
 // reactstrap components
 import {
   Button,
@@ -59,25 +59,25 @@ class ProfilePage extends React.Component {
       tabs: 1,
     };
   }
-  // componentDidMount() {
-  //   if (navigator.platform.indexOf("Win") > -1) {
-  //     document.documentElement.className += " perfect-scrollbar-on";
-  //     document.documentElement.classList.remove("perfect-scrollbar-off");
-  //     let tables = document.querySelectorAll(".table-responsive");
-  //     for (let i = 0; i < tables.length; i++) {
-  //       ps = new PerfectScrollbar(tables[i]);
-  //     }
-  //   }
-  //   document.body.classList.toggle("profile-page");
-  // }
-  // componentWillUnmount() {
-  //   if (navigator.platform.indexOf("Win") > -1) {
-  //     ps.destroy();
-  //     document.documentElement.className += " perfect-scrollbar-off";
-  //     document.documentElement.classList.remove("perfect-scrollbar-on");
-  //   }
-  //   document.body.classList.toggle("profile-page");
-  // }
+  componentDidMount() {
+    if (navigator.platform.indexOf("Win") > -1) {
+      document.documentElement.className += " perfect-scrollbar-on";
+      document.documentElement.classList.remove("perfect-scrollbar-off");
+      let tables = document.querySelectorAll(".table-responsive");
+      for (let i = 0; i < tables.length; i++) {
+        ps = new PerfectScrollbar(tables[i]);
+      }
+    }
+    document.body.classList.toggle("profile-page");
+  }
+  componentWillUnmount() {
+    if (navigator.platform.indexOf("Win") > -1) {
+      ps.destroy();
+      document.documentElement.className += " perfect-scrollbar-off";
+      document.documentElement.classList.remove("perfect-scrollbar-on");
+    }
+    document.body.classList.toggle("profile-page");
+  }
   toggleTabs = (e, stateName, index) => {
     e.preventDefault();
     this.setState({
@@ -148,7 +148,7 @@ class ProfilePage extends React.Component {
                       <i className="fab fa-github" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip951161185">
-                      Check out
+                      Be Amazed
                     </UncontrolledTooltip>
                   </div>
                 </Col>
@@ -195,7 +195,7 @@ class ProfilePage extends React.Component {
                         activeTab={"tab" + this.state.tabs}
                       >
                         <TabPane tabId="tab1">
-                          <Table className="tablesorter" responsive>
+                          <Table className="tablesorter">
                             <thead className="text-primary">
                               <tr>
                                 <th className="header">COIN</th>
