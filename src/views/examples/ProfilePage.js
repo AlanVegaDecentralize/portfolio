@@ -376,8 +376,9 @@ class ProfilePage extends React.Component {
                     <div className="description">
                       <h4 className="info-title">Give us a ring</h4>
                       <p>
-                        Michael Jordan <br />
-                        +40 762 321 762 <br />
+                        Alan Vega <br />
+                        +1 (323)327-2235 <br />
+                        alanvega002@gmail.com <br />
                         Mon - Fri, 8:00-22:00
                       </p>
                     </div>
