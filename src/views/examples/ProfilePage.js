@@ -24,6 +24,7 @@ import {
   Col,
   UncontrolledTooltip,
   UncontrolledCarousel,
+  Progress
 } from "reactstrap";
 
 // core components
@@ -196,30 +197,14 @@ class ProfilePage extends React.Component {
                       >
                         <TabPane tabId="tab1">
                           <Table className="tablesorter">
-                            <thead className="text-primary">
-                              <tr>
-                                <th className="header">COIN</th>
-                                <th className="header">AMOUNT</th>
-                                <th className="header">VALUE</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>BTC</td>
-                                <td>7.342</td>
-                                <td>48,870.75 USD</td>
-                              </tr>
-                              <tr>
-                                <td>ETH</td>
-                                <td>30.737</td>
-                                <td>64,53.30 USD</td>
-                              </tr>
-                              <tr>
-                                <td>XRP</td>
-                                <td>19.242</td>
-                                <td>18,354.96 USD</td>
-                              </tr>
-                            </tbody>
+                            <div className="text-primary">Node.js</div>
+                            <Progress animated striped={false} color="info" value={80} />
+                            <div className="text-primary">Node.js</div>
+                            <
+                            <div className="text-primary">Node.js</div>
+                            <div className="text-primary">Node.js</div>
+                            <div className="text-primary">Node.js</div>
+
                           </Table>
                         </TabPane>
                         <TabPane tabId="tab2">
