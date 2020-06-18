@@ -26,7 +26,7 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 class Footer extends React.Component {
@@ -62,7 +62,7 @@ class Footer extends React.Component {
                 </NavItem>
               </Nav>
             </Col>
-            <Col md="3">
+            {/* <Col md="3">
               <Nav>
                 <NavItem>
                   <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
@@ -85,7 +85,7 @@ class Footer extends React.Component {
                   </NavLink>
                 </NavItem>
               </Nav>
-            </Col>
+            </Col> */}
             <Col md="3">
               <h3 className="title">Follow us:</h3>
               <div className="btn-wrapper profile">
