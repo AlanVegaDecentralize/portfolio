@@ -24,7 +24,7 @@ import {
   Col,
   UncontrolledTooltip,
   UncontrolledCarousel,
-  Progress
+  Progress,
 } from "reactstrap";
 
 // core components
@@ -106,12 +106,12 @@ class ProfilePage extends React.Component {
                 <Col lg="6" md="6">
                   <h1 className="profile-title text-left">Alan Vega</h1>
                   <h5 className="text-on-back">01</h5>
-                  <p className="profile-description">
+                  <p className="profile-description text-align-left">
                     Self-taught full stack developer, driven and inspired by Web
                     3.0 and first principles rational. Keen on becoming a
-                    valuable member of a team through the design of
-                    maintainable code via TDD. Production experience with
-                    Node.js, Typescript, React, Express, Ethereum, MongoDb, and VR/AR.
+                    valuable member of a team through the design of maintainable
+                    code via TDD. Production experience with Node.js,
+                    Typescript, React, Express, Ethereum, MongoDb, and VR/AR.
                     Python experience with Django, Flask, and IoT.
                   </p>
                   <div className="btn-wrapper profile pt-3">
@@ -161,7 +161,9 @@ class ProfilePage extends React.Component {
                         className="img-center img-fluid rounded-circle"
                         src={require("assets/img/mike.jpg")}
                       />
-                      <h4 className="title">Qualities</h4>
+                      <h4 className="title">
+                        Production Skills & Personal Attributes
+                      </h4>
                     </CardHeader>
                     <CardBody>
                       <Nav
@@ -176,18 +178,31 @@ class ProfilePage extends React.Component {
                             onClick={(e) => this.toggleTabs(e, "tabs", 1)}
                             href="#pablo"
                           >
-                            Technical skills
+                            Node.js
                           </NavLink>
                         </NavItem>
                         <NavItem>
                           <NavLink
-                            className={classnames({ProfilePage
+                            className={classnames({
+                              ProfilePage,
                               active: this.state.tabs === 2,
                             })}
                             onClick={(e) => this.toggleTabs(e, "tabs", 2)}
                             href="#pablo"
                           >
-                            Personal Attributes
+                            Python
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={classnames({
+                              ProfilePage,
+                              active: this.state.tabs === 3,
+                            })}
+                            onClick={(e) => this.toggleTabs(e, "tabs", 3)}
+                            href="#pablo"
+                          >
+                            Networks, Systems, Databases
                           </NavLink>
                         </NavItem>
                       </Nav>
@@ -197,46 +212,51 @@ class ProfilePage extends React.Component {
                       >
                         <TabPane tabId="tab1">
                           <Table className="tablesorter">
-                            <div className="text-primary">Node.js</div>
-                            <Progress animated striped={false} color="info" value={80} />
-                            <div className="text-primary">Node.js</div>
-                            <
-                            <div className="text-primary">Node.js</div>
-                            <div className="text-primary">Node.js</div>
-                            <div className="text-primary">Node.js</div>
-
+                            <div className="text-primary">JavaScript</div>
+                            <Progress color="info" value={83} />
+                            <div className="text-primary">HTML/CSS</div>
+                            <Progress color="info" value={70} />
+                            <div className="text-primary">Typescript</div>
+                            <Progress color="info" value={65} />
+                            <div className="text-primary">React</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">Express</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">MongoDb</div>
+                            <Progress color="info" value={45} />
                           </Table>
                         </TabPane>
                         <TabPane tabId="tab2">
-                          <Row>
-                            <Label sm="3">Pay to</Label>
-                            <Col sm="9">
-                              <FormGroup>
-                                <Input
-                                  placeholder="e.g. 1Nasd92348hU984353hfid"
-                                  type="text"
-                                />
-                                <FormText color="default" tag="span">
-                                  Please enter a valid address.
-                                </FormText>
-                              </FormGroup>
-                            </Col>
-                          </Row>
-                          <Row>
-                            <Label sm="3">Amount</Label>
-                            <Col sm="9">
-                              <FormGroup>
-                                <Input placeholder="1.587" type="text" />
-                              </FormGroup>
-                            </Col>
-                          </Row>
-                          <Button
-                            className="btn-simple btn-icon btn-round float-right"
-                            color="primary"
-                            type="submit"
-                          >
-                            <i className="tim-icons icon-send" />
-                          </Button>
+                          <Table className="tablesorter">
+                            <div className="text-primary">Python3</div>
+                            <Progress color="info" value={75} />
+                            <div className="text-primary">Anaconda</div>
+                            <Progress color="info" value={70} />
+                            <div className="text-primary">
+                              Data Structure & Algorithms
+                            </div>
+                            <Progress color="info" value={70} />
+                            <div className="text-primary">IOTA</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">Django</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">Flask</div>
+                            <Progress color="info" value={60} />
+                          </Table>
+                        </TabPane>
+                        <TabPane tabId="tab3">
+                          <Table className="tablesorter">
+                            <div className="text-primary">Linux</div>
+                            <Progress color="info" value={80} label={`${80}`} />
+                            <div className="text-primary"></div>
+                            <Progress color="info" value={70} label={`${70}`} />
+                            <div className="text-primary"></div>
+                            <Progress color="info" value={60} label={`${60}`} />
+                            <div className="text-primary"></div>
+                            <Progress color="info" value={60} label={`${60}`} />
+                            <div className="text-primary"></div>
+                            <Progress color="info" value={40} label={`${40}`} />
+                          </Table>
                         </TabPane>
                       </TabContent>
                     </CardBody>
@@ -377,7 +397,7 @@ class ProfilePage extends React.Component {
                       <h4 className="info-title">Give us a ring</h4>
                       <p>
                         Alan Vega <br />
-                        +1 (323)327-2235 <br />
+                        +1(323)327-2235 <br />
                         alanvega002@gmail.com <br />
                         Mon - Fri, 8:00-22:00
                       </p>

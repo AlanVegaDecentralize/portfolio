@@ -6857,7 +6857,7 @@ button.bg-darker:focus {
 }
 
 .align-content-center {
-  align-content: center !important;
+  /* align-content: center !important; */
 }
 
 .align-content-between {
@@ -9730,6 +9730,11 @@ button.bg-darker:focus {
 
 .text-primary {
   color: #e14eca !important;
+}
+
+.text-primary-centered {
+  color: #e14eca !important;
+  text-align: center;
 }
 
 a.text-primary:hover,
