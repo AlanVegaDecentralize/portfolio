@@ -162,7 +162,7 @@ class ProfilePage extends React.Component {
                         src={require("assets/img/mike.jpg")}
                       />
                       <h4 className="title">
-                        Production Skills & Personal Attributes
+                        Production Skills <br />& Personal Attributes
                       </h4>
                     </CardHeader>
                     <CardBody>
@@ -202,7 +202,19 @@ class ProfilePage extends React.Component {
                             onClick={(e) => this.toggleTabs(e, "tabs", 3)}
                             href="#pablo"
                           >
-                            Networks, Systems, Databases
+                            Networks, Systems, & Databases
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={classnames({
+                              ProfilePage,
+                              active: this.state.tabs === 4,
+                            })}
+                            onClick={(e) => this.toggleTabs(e, "tabs", 4)}
+                            href="#pablo"
+                          >
+                            About Me
                           </NavLink>
                         </NavItem>
                       </Nav>
@@ -222,7 +234,7 @@ class ProfilePage extends React.Component {
                             <Progress color="info" value={60} />
                             <div className="text-primary">Express</div>
                             <Progress color="info" value={60} />
-                            <div className="text-primary">MongoDb</div>
+                            <div className="text-primary">Jest</div>
                             <Progress color="info" value={45} />
                           </Table>
                         </TabPane>
@@ -232,30 +244,50 @@ class ProfilePage extends React.Component {
                             <Progress color="info" value={75} />
                             <div className="text-primary">Anaconda</div>
                             <Progress color="info" value={70} />
-                            <div className="text-primary">
-                              Data Structure & Algorithms
-                            </div>
-                            <Progress color="info" value={70} />
                             <div className="text-primary">IOTA</div>
-                            <Progress color="info" value={60} />
+                            <Progress color="info" value={70} />
                             <div className="text-primary">Django</div>
                             <Progress color="info" value={60} />
                             <div className="text-primary">Flask</div>
-                            <Progress color="info" value={60} />
+                            <Progress color="info" value={50} />
+                            <div className="text-primary">ROBOT</div>
+                            <Progress color="info" value={45} />
                           </Table>
                         </TabPane>
                         <TabPane tabId="tab3">
                           <Table className="tablesorter">
                             <div className="text-primary">Linux</div>
-                            <Progress color="info" value={80} label={`${80}`} />
-                            <div className="text-primary"></div>
-                            <Progress color="info" value={70} label={`${70}`} />
-                            <div className="text-primary"></div>
-                            <Progress color="info" value={60} label={`${60}`} />
-                            <div className="text-primary"></div>
-                            <Progress color="info" value={60} label={`${60}`} />
-                            <div className="text-primary"></div>
-                            <Progress color="info" value={40} label={`${40}`} />
+                            <Progress color="info" value={80} />
+                            <div className="text-primary">Docker</div>
+                            <Progress color="info" value={70} />
+                            <div className="text-primary">
+                              Utilizing/Creating Web APIs
+                            </div>
+                            <Progress color="info" value={65} />
+                            <div className="text-primary">MongoDb</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">Ethereum</div>
+                            <Progress color="info" value={50} />
+                            <div className="text-primary">AWS (EC2 & S3)</div>
+                            <Progress color="info" value={40} />
+                          </Table>
+                        </TabPane>
+                        <TabPane tabId="tab4">
+                          <Table className="tablesorter">
+                            <div className="text-primary">Linux</div>
+                            <Progress color="info" value={80} />
+                            <div className="text-primary">Docker</div>
+                            <Progress color="info" value={70} />
+                            <div className="text-primary">
+                              Utilizing/Creating Web APIs
+                            </div>
+                            <Progress color="info" value={65} />
+                            <div className="text-primary">MongoDb</div>
+                            <Progress color="info" value={60} />
+                            <div className="text-primary">Ethereum</div>
+                            <Progress color="info" value={50} />
+                            <div className="text-primary">AWS (EC2 & S3)</div>
+                            <Progress color="info" value={40} />
                           </Table>
                         </TabPane>
                       </TabContent>
