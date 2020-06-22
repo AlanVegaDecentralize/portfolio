@@ -27,6 +27,9 @@ import {
   Progress,
 } from "reactstrap";
 
+// @material-ui components
+import { Grid, Paper, Chip, DoneIcon } from "@material-ui/core";
+
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ContactNavbar from "components/Navbars/ContactNavbar.js";
@@ -35,12 +38,12 @@ import ContactNavBar from "components/Navbars/ContactNavbar";
 
 const carouselItems = [
   {
-    src: require("assets/img/denys.jpg"),
+    src: require("assets/img/twitter.jpg"),
     altText: "Slide 1",
     caption: "Big City Life, United States",
   },
   {
-    src: require("assets/img/fabien-bazanegue.jpg"),
+    src: require("assets/img/ethereum.jpg"),
     altText: "Slide 2",
     caption: "Somewhere Beyond, United States",
   },
@@ -149,7 +152,7 @@ class ProfilePage extends React.Component {
                       <i className="fab fa-github" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip951161185">
-                      Be Amazed
+                      Be amazed... maybe
                     </UncontrolledTooltip>
                   </div>
                 </Col>
@@ -214,7 +217,7 @@ class ProfilePage extends React.Component {
                             onClick={(e) => this.toggleTabs(e, "tabs", 4)}
                             href="#pablo"
                           >
-                            About Me
+                            Attributes
                           </NavLink>
                         </NavItem>
                       </Nav>
@@ -274,20 +277,18 @@ class ProfilePage extends React.Component {
                         </TabPane>
                         <TabPane tabId="tab4">
                           <Table className="tablesorter">
-                            <div className="text-primary">Linux</div>
+                            <div className="text-primary">Adaptive</div>
+                            <Progress color="info" value={83} />
+                            <div className="text-primary">Creative</div>
                             <Progress color="info" value={80} />
-                            <div className="text-primary">Docker</div>
+                            <div className="text-primary">Ambitious</div>
+                            <Progress color="info" value={80} />
+                            <div className="text-primary">Sensibile</div>
+                            <Progress color="info" value={75} />
+                            <div className="text-primary">Follow-Through</div>
                             <Progress color="info" value={70} />
-                            <div className="text-primary">
-                              Utilizing/Creating Web APIs
-                            </div>
-                            <Progress color="info" value={65} />
-                            <div className="text-primary">MongoDb</div>
-                            <Progress color="info" value={60} />
-                            <div className="text-primary">Ethereum</div>
-                            <Progress color="info" value={50} />
-                            <div className="text-primary">AWS (EC2 & S3)</div>
-                            <Progress color="info" value={40} />
+                            <div className="text-primary">Collaborative</div>
+                            <Progress color="info" value={66} />
                           </Table>
                         </TabPane>
                       </TabContent>
@@ -306,8 +307,8 @@ class ProfilePage extends React.Component {
                   </Row>
                 </Col>
                 <Col md="5">
-                  <h1 className="profile-title text-left">Projects</h1>
                   <h5 className="text-on-back">02</h5>
+                  <h1 className="profile-title text-left">Projects</h1>
                   <p className="profile-description text-left">
                     An artist of considerable range, Ryan — the name taken by
                     Melbourne-raised, Brooklyn-based Nick Murphy — writes,
