@@ -27,10 +27,9 @@ import {
   Progress,
 } from "reactstrap";
 
-// @material-ui components
-import { Grid, Paper, Chip, DoneIcon } from "@material-ui/core";
-
 // core components
+import { Paper } from "@material-ui/core";
+
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ContactNavbar from "components/Navbars/ContactNavbar.js";
 import Footer from "components/Footer/Footer.js";
@@ -110,12 +109,12 @@ class ProfilePage extends React.Component {
                   <h1 className="profile-title text-left">Alan Vega</h1>
                   <h5 className="text-on-back">01</h5>
                   <p className="profile-description text-align-left">
-                    Self-taught full stack developer, driven and inspired by Web
-                    3.0 and first principles rational. Keen on becoming a
-                    valuable member of a team through the design of maintainable
-                    code via TDD. Production experience with Node.js,
-                    Typescript, React, Express, Ethereum, MongoDb, and VR/AR.
-                    Python experience with Django, Flask, and IoT.
+                    Full stack developer, driven and inspired by Web 3.0 and
+                    first principles rational. Keen on becoming a valuable
+                    member of a team through the design of maintainable code via
+                    TDD. Production experience with Node.js, Typescript, React,
+                    Express, Ethereum, MongoDb, and VR/AR. Python experience
+                    with Django, Flask, and IoT.
                   </p>
                   <div className="btn-wrapper profile pt-3">
                     <Button
@@ -303,7 +302,9 @@ class ProfilePage extends React.Component {
               <Row className="justify-content-between">
                 <Col md="6">
                   <Row className="justify-content-between align-items-center">
-                    <UncontrolledCarousel items={carouselItems} />
+                    <Paper elevation={24}>
+                      <UncontrolledCarousel items={carouselItems} />
+                    </Paper>
                   </Row>
                 </Col>
                 <Col md="5">
