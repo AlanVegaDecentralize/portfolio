@@ -31,9 +31,10 @@ import {
 import { Paper } from "@material-ui/core";
 
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ContactNavbar from "components/Navbars/ContactNavbar.js";
 import Footer from "components/Footer/Footer.js";
-import ContactNavBar from "components/Navbars/ContactNavbar";
+
+// Web3
+import ethEnabled from "./metamask.js";
 
 const carouselItems = [
   {
@@ -309,9 +310,10 @@ class ProfilePage extends React.Component {
                   <h5 className="text-on-back">02</h5>
                   <h1 className="profile-title text-left">Projects</h1>
                   <p className="profile-description text-left">
-                    Spearheaded product development of two products with an Agile approach in 
-                    regards to handling project scope: a fully functional Twitter application, and 
-                    React based web application. Deployed on AWS and maintained through Git. 
+                    Spearheaded product development of two projects through an
+                    Agile approach in regards to handling project scope: a fully
+                    functional Twitter application and a React based web
+                    application. Deployed on AWS and maintained through GitHub.
                   </p>
                   <div className="btn-wrapper pt-3">
                     <Button
@@ -320,7 +322,10 @@ class ProfilePage extends React.Component {
                       href="#pablo"
                       onClick={(e) => {
                         e.preventDefault();
-                        window.open('http://google.com', '_blank')
+                        window.open(
+                          "https://github.com/AlanVegaDecentralize",
+                          "_blank"
+                        );
                       }}
                     >
                       <i className="tim-icons icon-bulb-63" /> GitHub Profile
@@ -386,6 +391,7 @@ class ProfilePage extends React.Component {
                           data-placement="right"
                           id="tooltip341148792"
                           type="button"
+                          onClick={() => ethEnabled()}
                         >
                           Send text
                         </Button>
@@ -407,9 +413,8 @@ class ProfilePage extends React.Component {
                     </div>
                     <div className="description">
                       <h4 className="info-title">Location</h4>
-                      <p>
-                        Los Angeles, CA
-                      </p>
+                      <p>In a text-editor</p>
+                      <p>Los Angeles, CA</p>
                     </div>
                   </div>
                   <div className="info info-horizontal">
