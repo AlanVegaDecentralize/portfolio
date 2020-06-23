@@ -313,7 +313,8 @@ class ProfilePage extends React.Component {
                     Spearheaded product development of two projects through an
                     Agile approach in regards to handling project scope: a fully
                     functional Twitter application and a React based web
-                    application. Deployed on AWS and maintained through GitHub.
+                    application. Deployed on AWS EC2 and maintained through
+                    GitHub.
                   </p>
                   <div className="btn-wrapper pt-3">
                     <Button
