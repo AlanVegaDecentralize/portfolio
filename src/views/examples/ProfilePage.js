@@ -39,17 +39,17 @@ const carouselItems = [
   {
     src: require("assets/img/twitter.jpg"),
     altText: "Slide 1",
-    caption: "Twitter Application, Ethereum transactions through tweets. (Express JavaScript)",
+    caption: "Twitter Application to create Ethereum transactions via tweets.",
   },
   {
     src: require("assets/img/blocks.gif"),
     altText: "Slide 2",
-    caption: "Web application to purchase ERRC-20 token. (React TypeScript)",
+    caption: "React application to purchase ERC-20 token.",
   },
   {
     src: require("assets/img/iota.gif"),
     altText: "Slide 3",
-    caption: "Fully decentralized web application. (Django, React, IPFS)",
+    caption: "Fully decentralized social media app. (React, Django, IPFS)",
   },
 ];
 
@@ -112,7 +112,7 @@ class ProfilePage extends React.Component {
                     Full stack developer, driven and inspired by Web 3.0 and
                     first principles rational. Keen on becoming a valuable team
                     member through the design of maintainable code via TDD and a
-                    willingness to share and learn with my peers.
+                    willingness to share and learn alongside my peers.
                   </p>
                   <div className="btn-wrapper profile pt-3">
                     <Button
@@ -274,18 +274,18 @@ class ProfilePage extends React.Component {
                         </TabPane>
                         <TabPane tabId="tab4">
                           <Table className="tablesorter">
-                            <div className="text-primary">Adaptive</div>
+                            <div className="text-primary">Ambitious</div>
                             <Progress color="info" value={83} />
                             <div className="text-primary">Creative</div>
                             <Progress color="info" value={80} />
-                            <div className="text-primary">Ambitious</div>
+                            <div className="text-primary">Adaptive</div>
                             <Progress color="info" value={80} />
                             <div className="text-primary">Sensibile</div>
                             <Progress color="info" value={75} />
                             <div className="text-primary">Follow-Through</div>
-                            <Progress color="info" value={70} />
+                            <Progress color="info" value={72} />
                             <div className="text-primary">Collaborative</div>
-                            <Progress color="info" value={66} />
+                            <Progress color="info" value={68} />
                           </Table>
                         </TabPane>
                       </TabContent>
@@ -309,28 +309,21 @@ class ProfilePage extends React.Component {
                   <h5 className="text-on-back">02</h5>
                   <h1 className="profile-title text-left">Projects</h1>
                   <p className="profile-description text-left">
-                    An artist of considerable range, Ryan — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                    performs and records all of his own music, giving it a warm,
-                    intimate feel with a solid groove structure. An artist of
-                    considerable range.
+                    Spearheaded product development of two products with an Agile approach in 
+                    regards to handling project scope: a fully functional Twitter application, and 
+                    React based web application. Deployed on AWS and maintained through Git. 
                   </p>
                   <div className="btn-wrapper pt-3">
                     <Button
                       className="btn-simple"
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="tim-icons icon-book-bookmark" /> Bookmark
-                    </Button>
-                    <Button
-                      className="btn-simple"
                       color="info"
                       href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.open('http://google.com', '_blank')
+                      }}
                     >
-                      <i className="tim-icons icon-bulb-63" /> Check it!
+                      <i className="tim-icons icon-bulb-63" /> GitHub Profile
                     </Button>
                   </div>
                 </Col>
@@ -413,11 +406,9 @@ class ProfilePage extends React.Component {
                       <i className="tim-icons icon-square-pin" />
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Find us at the office</h4>
+                      <h4 className="info-title">Location</h4>
                       <p>
-                        Bld Mihail Kogalniceanu, nr. 8, <br />
-                        7652 Bucharest, <br />
-                        Romania
+                        Los Angeles, CA
                       </p>
                     </div>
                   </div>
@@ -431,7 +422,6 @@ class ProfilePage extends React.Component {
                         Alan Vega <br />
                         +1(323)327-2235 <br />
                         alanvega002@gmail.com <br />
-                        Mon - Fri, 8:00-22:00
                       </p>
                     </div>
                   </div>
