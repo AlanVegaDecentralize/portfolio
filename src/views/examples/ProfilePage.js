@@ -39,17 +39,17 @@ const carouselItems = [
   {
     src: require("assets/img/twitter.jpg"),
     altText: "Slide 1",
-    caption: "Big City Life, United States",
+    caption: "Twitter Application, Ethereum transactions through tweets. (Express JavaScript)",
   },
   {
-    src: require("assets/img/ethereum.jpg"),
+    src: require("assets/img/blocks.gif"),
     altText: "Slide 2",
-    caption: "Somewhere Beyond, United States",
+    caption: "Web application to purchase ERRC-20 token. (React TypeScript)",
   },
   {
-    src: require("assets/img/mark-finn.jpg"),
+    src: require("assets/img/iota.gif"),
     altText: "Slide 3",
-    caption: "Stocks, United States",
+    caption: "Fully decentralized web application. (Django, React, IPFS)",
   },
 ];
 
@@ -89,7 +89,7 @@ class ProfilePage extends React.Component {
   };
   render() {
     return (
-      <>
+      <div id="profile">
         <ExamplesNavbar />
         <div className="wrapper">
           <div className="page-header">
@@ -110,11 +110,9 @@ class ProfilePage extends React.Component {
                   <h5 className="text-on-back">01</h5>
                   <p className="profile-description text-align-left">
                     Full stack developer, driven and inspired by Web 3.0 and
-                    first principles rational. Keen on becoming a valuable
-                    member of a team through the design of maintainable code via
-                    TDD. Production experience with Node.js, Typescript, React,
-                    Express, Ethereum, MongoDb, and VR/AR. Python experience
-                    with Django, Flask, and IoT.
+                    first principles rational. Keen on becoming a valuable team
+                    member through the design of maintainable code via TDD and a
+                    willingness to share and learn with my peers.
                   </p>
                   <div className="btn-wrapper profile pt-3">
                     <Button
@@ -443,7 +441,7 @@ class ProfilePage extends React.Component {
           </section>
           <Footer />
         </div>
-      </>
+      </div>
     );
   }
 }
