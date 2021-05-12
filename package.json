@@ -33,7 +33,7 @@
   "homepage": "https://demos.creative-tim.com/blk-design-system-react/#/",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
-    "chart.js": "2.9.3",
+    "chart.js": "2.9.4",
     "classnames": "2.2.6",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
